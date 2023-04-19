@@ -12,6 +12,10 @@ const userSchema = new mongoose.Schema({
     enum: ['free', 'paid'],
     default: 'free',
   },
+  subscription: {
+    id: String,
+    purchaseToken: String,
+  },
 });
 
 const User = mongoose.model('User', userSchema);
